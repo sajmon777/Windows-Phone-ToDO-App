@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IToDoService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="TransportWithMessageCredential" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="https://simon-pc/ToDoWCF/ToDoService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IToDoService"
+                contract="ServiceToDo.IToDoService" name="BasicHttpBinding_IToDoService" />
+        </client>
+    </system.serviceModel>
+</configuration>
